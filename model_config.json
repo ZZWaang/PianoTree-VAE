@@ -1,0 +1,48 @@
+{
+  "project": {
+    "project_name": "piano-grid",
+    "model_path": "./models",
+    "log_path": "./log",
+    "demo_path": "./demo",
+    "stats_data_path": "./stats_data"
+  },
+  "dataset_path": {
+    "hpc_data_path": "./data/"
+  },
+  "train_hyperparams": {
+    "batch_size": 128,
+    "learning_rate": 1e-3,
+    "decay": true,
+    "parallel": true,
+    "n_epoch": 6,
+    "clip": 1,
+    "up_aug": 6,
+    "down_aug": -5,
+    "init_weight": false,
+    "weights": [1, 1, 0.1],
+    "teacher_forcing1": [0.8, 0],
+    "teacher_forcing2": [0.6, 0]
+  },
+  "data_repr": {
+    "max_simu_note": 16,
+    "max_pitch": 127,
+    "min_pitch": 0,
+    "pitch_sos": 128,
+    "pitch_eos": 129,
+    "pitch_pad": 130,
+    "dur_pad": 2,
+    "dur_width": 5,
+    "num_time_step": 32
+  },
+  "model_params": {
+    "note_emb_size": 128,
+    "enc_notes_hid_size": 256,
+    "enc_time_hid_size": 512,
+    "z_size": 512,
+    "dec_emb_hid_size": 128,
+    "dec_time_hid_size": 1024,
+    "dec_notes_hid_size": 512,
+    "dec_z_in_size": 256,
+    "dec_dur_hid_size": 64
+  }
+}
