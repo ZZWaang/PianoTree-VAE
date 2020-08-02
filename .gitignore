@@ -2,12 +2,11 @@
 __pycache__/
 log/
 models/
-demo/
 data.lnk
 stats_data/
-old-models/
 temp_data/
 .DS_Store
+data/
 
 # Distribution / packaging
 .Python
